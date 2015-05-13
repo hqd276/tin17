@@ -57,6 +57,9 @@
 	              	</li> -->
 	          	</ul>
 	        </li>
+	        <li>
+	        	<a href="<?php echo base_url();?>admin/advert">Advertising</a>
+	        </li>
 	        <!-- <li>
 	        	<a href="<?php echo base_url();?>admin/member">Member</a>
 	        </li>

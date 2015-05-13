@@ -57,7 +57,7 @@
 						<?php if($value['list_news'][0]){?>
 						<a class="first-item" href="<?php echo base_url().'news/detail/'.$value['list_news'][0]['id']?>">
 							<img src="<?php echo base_url().'uploads/news/thumbs/'.$value['list_news'][0]['image']?>">
-							<span class="title"><?php echo split_char($value['list_news'][0]['title'],50)?></span>
+							<span class="title"><strong><?php echo $value['list_news'][0]['title']?></strong></span>
 							<p class="description"><?php echo split_char($value['list_news'][0]['description'],80)?></p>
 						</a>
 						<?php unset ($value['list_news'][0]);}?>
@@ -65,7 +65,7 @@
 						<ul class="list-unstyled other">
 							<?php if ($value['list_news']) {
 								foreach ($value['list_news'] as $k => $v) {?>
-								<li><a href="<?php echo base_url().'news/detail/'.$v['id']?>"><?php echo split_char($v['title'],50)?></a></li>
+								<li><a href="<?php echo base_url().'news/detail/'.$v['id']?>"><?php echo $v['title']?></a></li>
 							<?php }
 							}?>
 						</ul>
@@ -75,8 +75,7 @@
 			</div>
 		</div>
 		<div class="col-sm-3">
-			<div class="hotnews">
-			</div>
+			<?php echo $template['partials']['right']; ?>
 		</div>
 	</div>
 </div>

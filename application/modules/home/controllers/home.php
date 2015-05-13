@@ -10,6 +10,9 @@ class Home extends MX_Controller{
 	}
 	
 	public function index(){
+		$dataR = Modules::run('right');
+		$this->template->set_partial('right','right',$dataR);
+
 		$data = array();
 		
 		$this->load->model('admin/modelnews');

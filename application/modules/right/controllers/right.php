@@ -10,20 +10,10 @@ class Right extends MX_Controller{
 		$this->load->model('admin/modelcategory');
 		$this->load->model('admin/modelnews');
 
-		$categories = $this->modelcategory->getCategories(array('type'=>$type));
-		// foreach ($categories as $key => $value) {
-		// 	if($value['parent'] == -1) {
-		// 		foreach ($categories as $k => $v) {
-		// 			$categories[$key]['child'] =$v;
-		// 		}
-		// 	}
-		// }
-		$recent_post = $this->modelnews->getNews(array('type'=>$type),' LIMIT 0,3 ',' created DESC');
-
 		$data = array();
+		$hot_news = $this->modelnews->getNews(array('hot_news'=>1,'status'=>1),'LIMIT 0,5','id DESC');
 
-		$data["categories"] = $categories;
-		$data["recent_post"] = $recent_post;
+		$data['hot_news'] = $hot_news;
 
 		return $data;
 	}

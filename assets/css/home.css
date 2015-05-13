@@ -60,7 +60,7 @@
 	position: relative;
 	margin-top: 50px;
 	font-size: 14px;
-	height: 300px;
+	height: 340px;
 }
 .group-news .group-news-item img {
 	width: 100%;
@@ -79,7 +79,12 @@
 }
 .group-news .group-news-item .title{
 	color: #282828;
-
+}
+.group-news .group-news-item .description{
+	color: #484848;
+}
+.group-news .group-news-item .other li {
+	border-top: dotted 1px #ccc;
 }
 .group-news .group-news-item .other a {
 	color: #000;
