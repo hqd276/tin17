@@ -155,3 +155,28 @@
   border-color: #ddd #ddd #ddd transparent;
   *border-left-color: #ffffff;
 }
+
+.share-social {
+  border: 2px solid #700000;
+  padding: 15px;
+  color: #0000CC
+}
+
+.other-news {
+
+}
+.other-news li{ 
+  height: 120px;
+}
+.other-news img{
+  width: 100px;
+  height: 70px;
+  margin-right: 10px;
+}
+.other-news a{
+  font-size: 13px;
+  color: #181818;
+}
+.other-news a:hover{
+  opacity: 0.8
+}

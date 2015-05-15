@@ -18,16 +18,33 @@ class News extends MX_Controller{
 		$this->template->set_layout('admin');
 	}
 	
-	public function index($type=0){
+	public function index($type=0,$page = 1){
 		$data = array();
 		$data['type'] = $type;
 
-		$news = $this->modelnews->getNews(array("type"=>$type)," LIMIT 0,20");
+		if($page<1)
+			$page=1;
+		$item_per_page = 20;
+		$begin = ($page-1) * $item_per_page;
+
+		$news = $this->modelnews->getNews(array("type"=>$type)," LIMIT ".$begin.",".($item_per_page+1),"created DESC");
 		if (count($news)>0) {
 			foreach ($news as $key => $value) {
 				# code...
 			}
+
 		}
+		$newer_link = '';
+		if(count($news)>$item_per_page){
+			$newer_link = base_url().'admin/news/index/0/'.($page+1);
+			unset($news[$item_per_page]);
+		}
+		$older_link = '';
+		if ($page>1) {
+			$older_link = base_url().'admin/news/index/0/'.($page-1);
+		}
+		$data['newer_link'] = $newer_link;
+		$data['older_link'] = $older_link;
 		$data['list'] = $news;
 		// var_dump($data['list']);die;
 
@@ -89,6 +106,7 @@ class News extends MX_Controller{
 			#Kiểm tra điều kiện validate 
 			if($this->form_validation->run() == TRUE){ 
 				$dataC['title'] = $this->input->post('title'); 
+				$dataC['slug'] = safe_title($this->input->post('title')); 
 				$dataC['description'] = $this->input->post('description'); 
 				$dataC['detail'] = $this->input->post('detail'); 
 				$dataC['info'] = $this->input->post('info'); 
@@ -162,6 +180,7 @@ class News extends MX_Controller{
 			#Kiểm tra điều kiện validate 
 			if($this->form_validation->run() == TRUE){ 
 				$dataC['title'] = $this->input->post('title'); 
+				$dataC['slug'] = safe_title($this->input->post('title')); 
 				$dataC['description'] = $this->input->post('description'); 
 				$dataC['detail'] = $this->input->post('detail'); 
 				$dataC['info'] = $this->input->post('info'); 

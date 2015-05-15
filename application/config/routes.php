@@ -55,6 +55,8 @@ $route['news'] = "news";
 $route['news/list/(:num)'] = "news/index/$1";
 $route['news/list/(:num)/(:num)'] = "news/index/$1/$2";
 
+$route['chi-tiet/(:any)'] = "news/detail_t/$1";
+
 $route['admin'] = "admin";
 // $route['list-support'] = "admin/support";
 // $route['list-booking'] = "admin/booking";

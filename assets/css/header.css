@@ -1,6 +1,5 @@
 .header {
 	background-color: #892424;
-	height: 42px;
 }
 .header .navbar-top .navbar-nav >li {
 }
@@ -8,13 +7,19 @@
 	font-size: 18px;
 }
 .header .navbar-top .navbar-nav >li >a{
-	line-height: 30px;
+	line-height: 38px;
 	color: #fff;
 	font-size: 12px;
 	padding:5px 10px;
 }
 .header .navbar-top .navbar-nav >li >a:hover,.header .navbar-top .navbar-nav >li >a.active{
 	background-color: #cf2732; 
+}
+.navbar-toggle {
+	background-color: #fff;
+}
+.navbar-toggle .icon-bar {
+	background-color: #892424;
 }
 .header .navbar-brand {
 	padding: 0;

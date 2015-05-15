@@ -37,5 +37,11 @@ class ModelNews extends CI_Model{
 		$query = $this->db->query("SELECT * FROM $this->_name WHERE id = ".$id);
 		return $query->row_array();
 	}
-
+	function getNewsBy($str,$key){
+		if (is_numeric($str))
+			$query = $this->db->query("SELECT * FROM $this->_name WHERE ".$key." = ".$str);
+		else 
+			$query = $this->db->query("SELECT * FROM $this->_name WHERE ".$key." like '".$str."'");
+		return $query->row_array();
+	}
 }

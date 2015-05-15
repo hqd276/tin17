@@ -2,7 +2,7 @@
 <div class="">
 	<div class="home-hotnews">
 		<div class="col-sm-6 home-item big">
-			<a href="<?php echo base_url().'news/detail/'.$home_news_big['id']?>">
+			<a href="<?php echo base_url().'chi-tiet/'.$home_news_big['slug']?>">
 				<img src="<?php echo base_url().'uploads/news/'.$home_news_big['image']?>">
 				<div class="description"><?php echo $home_news_big['title']?></div>
 			</a>
@@ -10,7 +10,7 @@
 		<div class="col-sm-6 no-padding">
 			<?php foreach ($home_news as $key => $value) {?>
 				<div class="col-sm-6 home-item">
-					<a href="<?php echo base_url().'news/detail/'.$value['id']?>">
+					<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>">
 						<img src="<?php echo base_url().'uploads/news/'.$value['image']?>">
 						<div class="description"><?php echo $value['title']?></div>
 					</a>
@@ -28,7 +28,7 @@
 			<div class="col-sm-11 no-padding">
 				<?php foreach ($new_news_img as $key => $value) {?>
 					<div class="col-sm-6 home-item">
-						<a href="<?php echo base_url().'news/detail/'.$value['id']?>">
+						<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>">
 							<img src="<?php echo base_url().'uploads/news/'.$value['image']?>">
 							<div class="description"><?php echo $value['title']?></div>
 						</a>
@@ -39,7 +39,7 @@
 		<div class="col-sm-6 text-left no-padding">
 			<?php foreach ($new_news as $key => $value) {?>
 				<div class="col-sm-6 home-text-item">
-					<a href="<?php echo base_url().'news/detail/'.$value['id']?>">
+					<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>">
 						<?php echo $value['title']?>
 					</a>
 				</div>
@@ -55,7 +55,7 @@
 					<div class="col-sm-4 group-news-item">
 						<div class="group-title"><a href="<?php echo base_url().'/news/list/'.$value['type'].'/'.$value['id']?>"><?php echo $value['name'] ?></a> </div>	
 						<?php if($value['list_news'][0]){?>
-						<a class="first-item" href="<?php echo base_url().'news/detail/'.$value['list_news'][0]['id']?>">
+						<a class="first-item" href="<?php echo base_url().'chi-tiet/'.$value['list_news'][0]['slug']?>">
 							<img src="<?php echo base_url().'uploads/news/thumbs/'.$value['list_news'][0]['image']?>">
 							<span class="title"><strong><?php echo $value['list_news'][0]['title']?></strong></span>
 							<p class="description"><?php echo split_char($value['list_news'][0]['description'],80)?></p>
@@ -65,7 +65,7 @@
 						<ul class="list-unstyled other">
 							<?php if ($value['list_news']) {
 								foreach ($value['list_news'] as $k => $v) {?>
-								<li><a href="<?php echo base_url().'news/detail/'.$v['id']?>"><?php echo $v['title']?></a></li>
+								<li><a href="<?php echo base_url().'chi-tiet/'.$v['slug']?>"><?php echo $v['title']?></a></li>
 							<?php }
 							}?>
 						</ul>

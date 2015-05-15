@@ -12,9 +12,9 @@
 					<img class="img-responsive" src="<?php echo base_url().'uploads/news/'.$value['image']?>">
 				</div>
 				<div class="col-md-8">
-					<a href="<?php echo base_url().'news/detail/'.$value['id']?>"><h4 class="text-uppercase"><?php echo $value['title']?></h4></a>
+					<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>"><h4 class="text-uppercase"><?php echo $value['title']?></h4></a>
 					<p><?php echo split_char($value['description'],150,1)." ..."?></p>
-					<a href="<?php echo base_url().'news/detail/'.$value['id']?>" class="text-uppercase more pull-right">More</a>
+					<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>" class="text-uppercase more pull-right">More</a>
 				</div>
 				
 			</div>

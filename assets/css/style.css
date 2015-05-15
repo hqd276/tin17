@@ -6,10 +6,9 @@ body {
 	/*font-family: UTM Bebas;*/
 	/*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 	font-family: Roboto;
-	font-size: 20px;
+	font-size: 14px;
 }
 .block-content {
-	width: 990px;
 	margin: 0px auto;
 }
 .carousel-control.left, .carousel-control.right  {
