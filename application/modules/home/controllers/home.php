@@ -22,7 +22,7 @@ class Home extends MX_Controller{
 		unset($home_news[0]);
 		$data['home_news'] = $home_news;
 
-		$new_news = $this->modelnews->getNews(array('status'=>1),'LIMIT 0,10','created DESC');
+		$new_news = $this->modelnews->getNews(array('status'=>1),'LIMIT 0,8','created DESC');
 		$new_news_img[] = $new_news[0];
 		unset($new_news[0]);
 		$new_news_img[] = $new_news[1];

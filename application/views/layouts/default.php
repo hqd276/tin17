@@ -5,7 +5,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
-
+<?php if (isset($item)){?>
+<meta property="og:title" content="<?php echo $item['title'] ?>"/>
+<meta property="og:description" content="<?php echo $item['description'] ?>"/>
+<meta property="og:url" content="<?php echo base_url().'chi-tiet/'.$item['slug']?>" />
+<meta property="og:image" content="<?php echo base_url().'uploads/news/'.$item['image']?>" />
+<?php }?>
 <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
 <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 
