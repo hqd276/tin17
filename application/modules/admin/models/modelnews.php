@@ -32,6 +32,10 @@ class ModelNews extends CI_Model{
 		$this->db->where('id', $id);
 		return $this->db->update($this->_name, $data); 
 	}
+	function updateNewsBy($key,$value,$data) {
+		$this->db->where($key, $value);
+		return $this->db->update($this->_name, $data); 
+	}
 
 	function getNewsById($id){
 		$query = $this->db->query("SELECT * FROM $this->_name WHERE id = ".$id);

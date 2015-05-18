@@ -46,14 +46,16 @@
 			<?php }?>
 		</div>
 	</div>
+
 	<div class="clearfix"></div>
 	<div class="group-news row">
 		<div class="col-sm-9">
+			<img class="adv-mid-home" src="<?php echo base_url('/assets/images/qc1.png')?>">
 			<div class="row">
 				<?php foreach ($categories as $key => $value) {
 					if($value['list_news']) {?>				
 					<div class="col-sm-4 group-news-item">
-						<div class="group-title"><a href="<?php echo base_url().'/news/list/'.$value['type'].'/'.$value['id']?>"><?php echo $value['name'] ?></a> </div>	
+						<div class="group-title"><a href="<?php echo base_url().'/'.$value['slug']?>"><?php echo $value['name'] ?></a> </div>	
 						<?php if($value['list_news'][0]){?>
 						<a class="first-item" href="<?php echo base_url().'chi-tiet/'.$value['list_news'][0]['slug']?>">
 							<img src="<?php echo base_url().'uploads/news/thumbs/'.$value['list_news'][0]['image']?>">

@@ -33,5 +33,14 @@ class ModelCategory extends CI_Model{
 		$query = $this->db->query("SELECT * FROM $this->_name WHERE id = ".$id);
 		return $query->row_array();
 	}
+	function getCategoryBy($key,$value){
+		if (is_numeric($value)) {
+			$strWhere = $key.' = '.$value;
+		}else {
+			$strWhere = $key." like '".$value."'";
+		}
+		$query = $this->db->query("SELECT * FROM $this->_name WHERE ".$strWhere);
+		return $query->row_array();
+	}
 
 }

@@ -2,7 +2,7 @@
 <div class=" bg-white">
 	<h2 class="text-uppercase"><?php echo $title?></h2>
 	<hr>
-	<a href="<?php echo base_url()?>" class="">Home</a> / <a href="<?php echo base_url().'news/list/'.$cat['type'].'/'. $cat['id']?>"><?php echo $cat['name']?></a>
+	<a href="<?php echo base_url()?>" class="">Home</a> / <a href="<?php echo base_url().'/'. $cat['slug']?>"><?php echo $cat['name']?></a>
 	<hr>
 
 	<div class="news-form col-md-8">

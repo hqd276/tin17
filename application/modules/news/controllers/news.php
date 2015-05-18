@@ -25,27 +25,8 @@ class News extends MX_Controller {
 		$this->template->set_partial('right','right',$dataR);
 
 		$data = array();
-		switch ($type) {
-			case 0:
-				$data['title'] = "News & Events";
-				$data['page'] = "news";
-				break;
-			case 1:
-				$data['title'] = "Themes";
-				break;
-			case 2:
-				$data['title'] = "Tours";
-				$data['page'] = "tour";
-				break;
-			case 3:
-				$data['title'] = "Blog";
-				$data['page'] = "blog";
-				break;
-			
-			default:
-				# code...
-				break;
-		}
+		$data['title'] = "News";
+		$data['page'] = "news";
 
 		if ($cat>0){
 			$category = $this->modelcategory->getCategoryById($cat);
@@ -54,6 +35,23 @@ class News extends MX_Controller {
 		}else{
 			$data['cat'] = array('type'=>$type,'id'=>0,'name'=>'');
 			$list_news = $this->modelnews->getNews(array('type'=>$type),' LIMIT 0,5');
+		}
+
+		$data['list_news'] = $list_news;
+		$this->template->build('news',$data);
+	}
+	public function index_t($slug = ''){
+		$dataR = Modules::run('right',0);
+		$this->template->set_partial('right','right',$dataR);
+
+		$data = array();
+
+		$category = $this->modelcategory->getCategoryBy('slug',$slug);
+		if ($category){
+			$data['cat'] = $category;
+			$data['title'] = $category['name'];
+			$data['description'] = $category['description'];
+			$list_news = $this->modelnews->getNews(array('category_id'=>$category['id']),' LIMIT 0,5');
 		}
 
 		$data['list_news'] = $list_news;
@@ -109,10 +107,12 @@ class News extends MX_Controller {
 			$other_news = $this->modelnews->getNews(array('type'=>$detail_news['type']),' LIMIT 0,5');
 		}
 		
+		$this->modelnews->updateNewsBy('slug',$slug,array('views'=>$detail_news['views']+1));
 
 		$dataR = Modules::run('right',$detail_news['type']);
 		$this->template->set_partial('right','right',$dataR);
 
+		$data['title'] = $detail_news['title'] ;
 		$data['other_news'] = $other_news;
 		$data['item'] = $detail_news;
 		$data['cat'] = $category;

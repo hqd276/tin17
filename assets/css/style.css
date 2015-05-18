@@ -17,3 +17,11 @@ body {
 a:hover{
 	text-decoration: none;
 }
+.adv-mid-home {
+	width: 100%;
+	margin-top:10px;
+}
+.adv-right {
+	width: 100%;
+	margin-top:10px;
+}

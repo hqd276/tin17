@@ -10,6 +10,7 @@
 			<th>Category</th>
 			<th>Hot</th>
 			<th>Home</th>
+			<th>Views</th>
 			<th>Status</th>
 			<th>Action</th>
 		</thead>
@@ -23,6 +24,7 @@
 				<td><?php echo $item["category_id"]?></td>
 				<td><?php echo $item["hot_news"]?></td>
 				<td><?php echo $item["home_news"]?></td>
+				<td><?php echo $item["views"]?></td>
 				<td><?php echo $item["status"]?></td>
 				<td>
 					<a href="#" onclick="confirmClick('<?php echo base_url('/admin/news/delete/'.$type.'/'.$item["id"])?>')"  class="btn btn-default"> Delete </a>

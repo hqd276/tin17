@@ -12,8 +12,10 @@ class Right extends MX_Controller{
 
 		$data = array();
 		$hot_news = $this->modelnews->getNews(array('hot_news'=>1,'status'=>1),'LIMIT 0,5','id DESC');
-
 		$data['hot_news'] = $hot_news;
+
+		$top_views_news = $this->modelnews->getNews(array('status'=>1),'LIMIT 0,5','views DESC');
+		$data['top_views_news'] = $top_views_news;
 
 		return $data;
 	}

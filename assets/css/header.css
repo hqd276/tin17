@@ -1,6 +1,24 @@
 .header {
 	background-color: #892424;
 }
+.header .logo {
+	background-color: #5ea201;
+}
+.header .logo .container{
+	background: url('../images/banner.png') no-repeat;
+	height: 64px;
+}
+.header .search-form{
+	margin: 15px;
+	position: relative;
+}
+.header .search-form .fa-search{
+	position: absolute;
+	right: 20px;
+	top:8px;
+	color: #999;
+}
+
 .header .navbar-top .navbar-nav >li {
 }
 .header .navbar-top .navbar-nav >li >a >i {

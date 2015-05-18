@@ -23,7 +23,7 @@ class Category extends MX_Controller{
 		$data = array();
 		$data['type'] = $type;
 
-		$category = $this->modelcategory->getCategories(array("type"=>$type)," LIMIT 0,20");
+		$category = $this->modelcategory->getCategories(array("type"=>$type));
 		if (count($category)>0) {
 			foreach ($category as $key => $value) {
 				# code...
@@ -48,6 +48,7 @@ class Category extends MX_Controller{
 		// $category = add_array_key("id",$category);
 
 		$dataC = array('name' =>'',
+						'slug' =>'',
 						'parent' =>'',
 						'description' =>'',
 						'order' =>'',
@@ -63,6 +64,7 @@ class Category extends MX_Controller{
 			#Kiểm tra điều kiện validate 
 			if($this->form_validation->run() == TRUE){ 
 				$dataC['name'] = $this->input->post('name'); 
+				$dataC['slug'] = safe_title($this->input->post('name')); 
 				$dataC['parent'] = $this->input->post('parent'); 
 				$dataC['description'] = $this->input->post('description'); 
 				$dataC['order'] = $this->input->post('order'); 
@@ -118,6 +120,7 @@ class Category extends MX_Controller{
 			#Kiểm tra điều kiện validate 
 			if($this->form_validation->run() == TRUE){ 
 				$dataC['name'] = $this->input->post('name'); 
+				$dataC['slug'] = safe_title($this->input->post('name')); 
 				$dataC['parent'] = $this->input->post('parent'); 
 				$dataC['description'] = $this->input->post('description'); 
 				$dataC['order'] = $this->input->post('order'); 

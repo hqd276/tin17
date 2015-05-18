@@ -16,3 +16,14 @@
 	color: #000;
 	padding: 10px;
 }
+.footer .navbar-nav {
+	float: none;
+	display: inline-block;
+}
+.footer .navbar-nav li a {
+	color: #fff;
+}
+.footer .navbar-nav li a:hover {
+	background-color: transparent;
+	color: #ccc;
+}

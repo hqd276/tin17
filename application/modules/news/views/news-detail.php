@@ -2,7 +2,7 @@
 <div class="bg-white">
 	<h2 class="text-uppercase"><?php echo $item['title']?></h2>
 	<hr>
-	<a href="<?php echo base_url()?>" class="">Home</a> / <a href="<?php echo base_url().'news/list/'.$cat['type'].'/'. $cat['id']?>"><?php echo $cat['name']?></a>
+	<a href="<?php echo base_url()?>" class="">Home</a> / <a href="<?php echo base_url().'/'. $cat['slug']?>"><?php echo $cat['name']?></a>
 	<hr>
 
 	<div class="col-md-8 news-detail">
@@ -22,6 +22,8 @@
 		</div>
 		<hr>
 		<div class="fb-comments" data-href="<?php echo base_url().'chi-tiet/'.$item['slug']?>" data-width="100%" data-numposts="5" data-colorscheme="light"></div>
+		<hr>
+		<img class="adv-mid-home" src="<?php echo base_url('/assets/images/qc1.png')?>">
 		<hr>
 
 		<ul class="list-unstyled other-news">
