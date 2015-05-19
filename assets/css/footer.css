@@ -3,6 +3,7 @@
 	color: #fff;
 	overflow: hidden;
 	padding: 10px;
+	position: relative;
 }
 .navbar-bottom  {
 	margin-bottom: 0;
@@ -26,4 +27,10 @@
 .footer .navbar-nav li a:hover {
 	background-color: transparent;
 	color: #ccc;
+}
+.footer .footer-logo img {
+	width: 80px;
+	position: absolute;
+	top:50px;
+	left: 50px;
 }

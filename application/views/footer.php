@@ -13,6 +13,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 <div class="footer text-center" data-sr>
+  <a class="pull-left footer-logo" href="/"><img src="<?php echo base_url('/assets/images/tin17-logo.png')?>"></a>
   <ul class="nav navbar-nav text-uppercase">
     <li><a href="">Đặt tin17.com làm trang chủ</a> </li>
     <li><a href="">Liên hệ</a> </li>
