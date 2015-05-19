@@ -24,7 +24,7 @@
 	      <ul class="nav navbar-nav text-uppercase">
 	      	<li><a href="/"><i class="fa fa-home"></i></a></li>
 	        <?php foreach ($categories as $key => $value) {?>
-	        	<li class=""><a href="/<?php echo $value['slug']?>"> <?php echo $value['name']?> </a></li>
+	        	<li class=""><a href="<?php echo base_url('/danh-muc/'.$value['slug'])?>"> <?php echo $value['name']?> </a></li>
 	        <?php }?>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->

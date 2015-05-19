@@ -55,7 +55,7 @@
 				<?php foreach ($categories as $key => $value) {
 					if($value['list_news']) {?>				
 					<div class="col-sm-4 group-news-item">
-						<div class="group-title"><a href="<?php echo base_url().'/'.$value['slug']?>"><?php echo $value['name'] ?></a> </div>	
+						<div class="group-title"><a href="<?php echo base_url().'danh-muc/'.$value['slug']?>"><?php echo $value['name'] ?></a> </div>	
 						<?php if($value['list_news'][0]){?>
 						<a class="first-item" href="<?php echo base_url().'chi-tiet/'.$value['list_news'][0]['slug']?>">
 							<img src="<?php echo base_url().'uploads/news/thumbs/'.$value['list_news'][0]['image']?>">
