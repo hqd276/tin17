@@ -2,11 +2,13 @@
 	background-color: #892424;
 }
 .header .logo {
-	background-color: #5ea201;
+	background: url('../images/banner.jpg') no-repeat;
+	background-size: auto 100% ;
+	background-position: center;
+	height: 64px;
 }
 .header .logo .container{
-	background: url('../images/banner.png') no-repeat;
-	height: 64px;
+
 }
 .header .search-form{
 	margin: 15px;
