@@ -133,6 +133,12 @@ tinymce.init({
 			</div>
 		</div>
 		<div class="form-group col-sm-12">
+			<label for="inputEmail3" class="col-sm-2 control-label">Video News</label>
+			<div class="col-sm-10">
+				<input type ="checkbox" name="is_video" value="1" <?php echo ($item['is_video'] == 1)?"checked":""; ?>>
+			</div>
+		</div>
+		<div class="form-group col-sm-12">
 			<label for="inputEmail3" class="col-sm-2 control-label">Publish</label>
 			<div class="col-sm-10">
 				<input type ="checkbox" name="status" value="1" <?php echo ($item['status'] == 1)?"checked":""; ?>>

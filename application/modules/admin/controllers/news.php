@@ -84,6 +84,7 @@ class News extends MX_Controller{
 		// $category = add_array_key("id",$category);
 
 		$dataC = array('title' =>'',
+						'slug' =>'',
 						'description' =>'',
 						'detail' =>'',
 						'info' =>'',
@@ -93,6 +94,7 @@ class News extends MX_Controller{
 						'created' =>'',
 						'hot_news' =>'',
 						'home_news' =>'',
+						'is_video' =>'',
 						'image' =>'',
 						'order' =>'',
 						'status' =>'');
@@ -125,6 +127,11 @@ class News extends MX_Controller{
 					$dataC['home_news'] = 1;
 				else 
 					$dataC['home_news'] = 0;
+
+				if ($this->input->post('is_video'))
+					$dataC['is_video'] = 1;
+				else 
+					$dataC['is_video'] = 0;
 
 				if ($this->input->post('status'))
 					$dataC['status'] = 1;
@@ -199,6 +206,11 @@ class News extends MX_Controller{
 					$dataC['home_news'] = 1;
 				else 
 					$dataC['home_news'] = 0;
+
+				if ($this->input->post('is_video'))
+					$dataC['is_video'] = 1;
+				else 
+					$dataC['is_video'] = 0;
 
 				if ($this->input->post('status'))
 					$dataC['status'] = 1;

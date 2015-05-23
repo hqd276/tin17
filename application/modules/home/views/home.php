@@ -75,6 +75,16 @@
 				<?php }
 				}?>
 			</div>
+			<div class="row">
+				<?php foreach ($video_news as $key => $value) {?>
+					<div class="col-sm-6 home-item">
+						<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>">
+							<img src="<?php echo base_url().'uploads/news/'.$value['image']?>">
+							<div class="description"><?php echo $value['title']?></div>
+						</a>
+					</div>
+				<?php }?>
+			</div>
 		</div>
 		<div class="col-sm-3">
 			<?php echo $template['partials']['right']; ?>
