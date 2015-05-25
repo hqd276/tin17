@@ -101,9 +101,9 @@ class News extends MX_Controller {
 			if ($category)
 				$other_news = $this->modelnews->getNews(array('category_id'=>$category['id']),' LIMIT 0,5');
 			else
-				$category = array("type"=>$detail_news['type'],"id" =>0,"name"=>"");
+				$category = array("type"=>$detail_news['type'],"id" =>0,"name"=>"","slug"=>"");
 		}else{
-			$category = array("type"=>$detail_news['type'],"id" =>0,"name"=>"");
+			$category = array("type"=>$detail_news['type'],"id" =>0,"name"=>"","slug"=>"");
 			$other_news = $this->modelnews->getNews(array('type'=>$detail_news['type']),' LIMIT 0,5');
 		}
 		

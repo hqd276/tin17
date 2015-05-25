@@ -1,5 +1,5 @@
 <div class="header" >
-	<div class="logo">
+	<div class="logo hidden-xs">
 		<div class="container">
 			<div class="search-form col-sm-3 pull-right">
 				<input class="search form-control" name="search" value="" placeholder="Từ khóa cần tìm">
@@ -17,6 +17,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
+	      <a class="navbar-brand visible-xs-block" href="#"><img src="<?php echo base_url('/assets/images/tin17-logo.png')?>"></a>
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->

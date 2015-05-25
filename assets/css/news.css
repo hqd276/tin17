@@ -44,6 +44,9 @@
 .news-detail .glyphicon {
 	margin: 0 10px;
 }
+.news-detail .detail img {
+  max-width: 100%;
+}
 
 /* custom inclusion of right, left and below tabs */
 

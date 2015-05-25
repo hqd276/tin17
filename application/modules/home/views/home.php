@@ -60,7 +60,7 @@
 						<a class="first-item" href="<?php echo base_url().'chi-tiet/'.$value['list_news'][0]['slug']?>">
 							<img src="<?php echo base_url().'uploads/news/thumbs/'.$value['list_news'][0]['image']?>">
 							<span class="title"><strong><?php echo $value['list_news'][0]['title']?></strong></span>
-							<p class="description"><?php echo split_char($value['list_news'][0]['description'],80)?></p>
+							<p class="description"><?php echo split_char($value['list_news'][0]['description'],70)."..."?></p>
 						</a>
 						<?php unset ($value['list_news'][0]);}?>
 
@@ -75,15 +75,18 @@
 				<?php }
 				}?>
 			</div>
-			<div class="row">
-				<?php foreach ($video_news as $key => $value) {?>
-					<div class="col-sm-6 home-item">
-						<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>">
-							<img src="<?php echo base_url().'uploads/news/'.$value['image']?>">
-							<div class="description"><?php echo $value['title']?></div>
-						</a>
-					</div>
-				<?php }?>
+			<div class="video-block">
+				<div class="title"> Tin tức Video</div>
+				<div class="row">
+					<?php foreach ($video_news as $key => $value) {?>
+						<div class="col-sm-4">
+							<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>">
+								<div class="description"><?php echo split_char($value['title'],35)."..."?></div>
+								<img src="<?php echo base_url().'uploads/news/'.$value['image']?>">
+							</a>
+						</div>
+					<?php }?>
+				</div>
 			</div>
 		</div>
 		<div class="col-sm-3">

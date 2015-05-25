@@ -30,7 +30,7 @@ class Home extends MX_Controller{
 		$data['new_news_img'] = $new_news_img;
 		$data['new_news'] = $new_news;
 
-		$video_news = $this->modelnews->getNews(array('is_video'=>1,'status'=>1),'LIMIT 0,4','id DESC');
+		$video_news = $this->modelnews->getNews(array('is_video'=>1,'status'=>1),'LIMIT 0,3','id DESC');
 		$data['video_news'] = $video_news;
 
 		$this->load->model('admin/modelcategory');

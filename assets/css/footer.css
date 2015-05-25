@@ -29,8 +29,17 @@
 	color: #ccc;
 }
 .footer .footer-logo img {
-	width: 80px;
+	width: 120px;
 	position: absolute;
 	top:50px;
-	left: 50px;
+	left: 80px;
+}
+.footer .share-social {
+	border: none;
+}
+.footer .share-social img{
+	width: 50px;
+}
+.footer .share-social li {
+	float: left;
 }

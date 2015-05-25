@@ -12,18 +12,19 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div class="footer text-center" data-sr>
+<div class="footer text-center">
   <a class="pull-left footer-logo" href="/"><img src="<?php echo base_url('/assets/images/tin17-logo.png')?>"></a>
   <ul class="nav navbar-nav text-uppercase">
-    <li><a href="">Đặt tin17.com làm trang chủ</a> </li>
-    <li><a href="">Liên hệ</a> </li>
-    <li><a href="">Điều khoản sử dụng</a> </li>
+    <li><a href="#" style="behavior: url(#default#homepage);" onclick="this.setHomePage('http://tin17.com');return false;">Đặt tin17.com làm trang chủ</a> </li>
+    <li><a href="<?php echo base_url('/chi-tiet/Lien-he')?>">Liên hệ</a> </li>
+    <li><a href="<?php echo base_url('/chi-tiet/Dieu-khoan')?>">Điều khoản sử dụng</a> </li>
   </ul>
   <div class="clearfix"></div>
-  <ul class="nav navbar-nav ">
-    <li><a href=""><img src="<?php echo base_url('/assets/images/contact-fb.png')?>"></a> </li>
-    <li><a href=""><img src="<?php echo base_url('/assets/images/contact-address.png')?>"></a> </li>
-    <li><a href=""><img src="<?php echo base_url('/assets/images/contact-mail.png')?>"></a> </li>
+  <ul class="nav navbar-nav share-social ">
+    <li><a href="https://www.facebook.com/Moitrenmang"><img src="<?php echo base_url('/assets/images/fb.png')?>"></a> </li>
+    <li><a href="https://plus.google.com/115597441987086057658"><img src="<?php echo base_url('/assets/images/gplus.png')?>"></a> </li>
+    <li><a href="https://www.youtube.com/channel/UCdukbZkCyZGon25XoAtKRvg"><img src="<?php echo base_url('/assets/images/y.png')?>"></a> </li>
+    <li><a href="https://twitter.com/moitrenmang"><img src="<?php echo base_url('/assets/images/tw.png')?>"></a> </li>
   </ul>
   <div class="clearfix"></div>
 	<span class="text-uppercase pull-right">&copy; - Copyright by HD</span>

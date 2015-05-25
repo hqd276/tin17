@@ -8,6 +8,11 @@ body {
 	font-family: Roboto;
 	font-size: 14px;
 }
+.navbar-brand img {
+	height: 50px;
+	padding: 5px;
+
+}
 .block-content {
 	margin: 0px auto;
 }
