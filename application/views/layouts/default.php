@@ -23,6 +23,8 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/footer.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
+<link rel="icon" href="<?php echo base_url();?>assets/images/favicon.ico" type="image/gif" sizes="48x48">
+
 <script src="<?php echo base_url();?>assets/js/lightbox.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/lightbox.css">
 

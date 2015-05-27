@@ -31,8 +31,32 @@
 .footer .footer-logo img {
 	width: 120px;
 	position: absolute;
-	top:50px;
+	top:60px;
 	left: 80px;
+}
+.footer .footer-gotop img {
+	width: 120px;
+	position: absolute;
+	top:60px;
+	right: 80px;
+}
+@media (max-width: 768px) {
+	.footer .footer-logo img {
+		width: 50px;
+		position: absolute;
+		top:60px;
+		left: 20px;
+	}
+	.footer .footer-gotop img {
+		width: 50px;
+		position: absolute;
+		top:60px;
+		right: 20px;
+	}
+}
+.footer hr {
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 .footer .share-social {
 	border: none;
