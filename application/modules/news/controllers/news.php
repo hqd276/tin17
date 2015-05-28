@@ -40,9 +40,14 @@ class News extends MX_Controller {
 		$data['list_news'] = $list_news;
 		$this->template->build('news',$data);
 	}
-	public function index_t($slug = ''){
+	public function index_t($slug = '',$page = 1){
 		$dataR = Modules::run('right',0);
 		$this->template->set_partial('right','right',$dataR);
+
+		if($page<1)
+			$page=1;
+		$item_per_page = 20;
+		$begin = ($page-1) * $item_per_page;
 
 		$data = array();
 
@@ -51,8 +56,20 @@ class News extends MX_Controller {
 			$data['cat'] = $category;
 			$data['title'] = $category['name'];
 			$data['description'] = $category['description'];
-			$list_news = $this->modelnews->getNews(array('category_id'=>$category['id']),' LIMIT 0,5');
+			$list_news = $this->modelnews->getNews(array('category_id'=>$category['id'])," LIMIT ".$begin.",".($item_per_page+1));
 		}
+		
+		$newer_link = '';
+		if(count($list_news)>$item_per_page){
+			$newer_link = base_url().'danh-muc/'.$slug.'/'.($page+1);
+			unset($list_news[$item_per_page]);
+		}
+		$older_link = '';
+		if ($page>1) {
+			$older_link = base_url().'danh-muc/'.$slug.'/'.($page-1);
+		}
+		$data['newer_link'] = $newer_link;
+		$data['older_link'] = $older_link;
 
 		$data['list_news'] = $list_news;
 		$this->template->build('news',$data);

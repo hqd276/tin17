@@ -20,6 +20,12 @@
 			</div>
 		<?php }
 		?>
+		<nav>
+		  <ul class="pager">
+		    <li class="previous <?php if(!$older_link) echo 'disabled'?>"><a href="<?php echo $older_link?>"><span aria-hidden="true">&larr;</span> Mới hơn</a></li>
+		    <li class="next <?php if(!$newer_link) echo 'disabled'?>"><a href="<?php echo $newer_link?>">Cũ hơn <span aria-hidden="true">&rarr;</span></a></li>
+		  </ul>
+		</nav>
 	</div>
 	<div class="col-md-4">
 		<?php echo $template['partials']['right']; ?>
