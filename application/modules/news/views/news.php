@@ -9,7 +9,7 @@
 		<?php foreach ($list_news as $key => $value) {?>
 			<div class="item">
 				<div class="col-md-4">
-					<img class="img-responsive" src="<?php echo base_url().'uploads/news/'.$value['image']?>">
+					<img class="img-responsive" src="<?php echo base_url().'uploads/news/thumbs/'.$value['image']?>">
 				</div>
 				<div class="col-md-8">
 					<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>"><h4 class="text-uppercase"><?php echo $value['title']?></h4></a>
