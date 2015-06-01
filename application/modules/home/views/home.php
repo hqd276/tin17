@@ -53,7 +53,17 @@
 	<div class="clearfix"></div>
 	<div class="group-news row">
 		<div class="col-sm-9">
-			<img class="adv-mid-home" src="<?php echo base_url('/assets/images/qc1.png')?>">
+			<script async src=""//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js""></script>
+			<!-- TIN 17 - AUTO -->
+			<ins class=""adsbygoogle""
+			     style=""display:block""
+			     data-ad-client=""ca-pub-3860284943335442""
+			     data-ad-slot=""5513624411""
+			     data-ad-format=""auto""></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+			<!-- <img class="adv-mid-home" src="<?php echo base_url('/assets/images/qc1.png')?>"> -->
 			<div class="row">
 				<?php foreach ($categories as $key => $value) {
 					if($value['list_news']) {?>				

@@ -28,6 +28,7 @@
     <li><a href="https://twitter.com/moitrenmang"><img src="<?php echo base_url('/assets/images/tw.png')?>"></a> </li>
   </ul>
   <hr>
+  <div class="text-center">lienhelife@gmail.com</div>
 	<span class="text-uppercase pull-right">&copy; - Copyright by HD</span>
 </div>
 

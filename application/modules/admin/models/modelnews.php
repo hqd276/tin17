@@ -10,7 +10,9 @@ class ModelNews extends CI_Model{
 		$strWhere = "";
 		if (is_array($where)) {
 			foreach ($where as $key => $value) {
-				$strWhere .= " AND $key = $value";
+				if (!is_numeric($value))
+					$strWhere .= " AND $key like '%$value%'";
+				else $strWhere .= " AND $key = $value";
 			}
 		}
 		$strLimit = "";
@@ -20,7 +22,6 @@ class ModelNews extends CI_Model{
 		$strOrder = "";
 		if ($order!=null) 
 			$strOrder = " ORDER BY ".$order; 
-
 		$query = $this->db->query("SELECT * FROM $this->_name WHERE 1=1 $strWhere $strOrder $strLimit ");
 		return $query->result_array();
 	}

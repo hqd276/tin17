@@ -2,8 +2,10 @@
 	<div class="logo hidden-xs">
 		<div class="container">
 			<div class="search-form col-sm-3 pull-right">
-				<input class="search form-control" name="search" value="" placeholder="Từ khóa cần tìm">
-				<i class="fa fa-search"></i>
+				<form action="<?php echo base_url().'search';?>" method="get" id="search-form">
+		      		<input type="text" class="form-control t-search" name="txtsearch">
+		        	<i class="fa fa-search"></i>
+		      	</form>
 			</div>
 		</div>
 	</div>
@@ -32,3 +34,12 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 </div>
+
+<script type="text/javascript">
+	$(".t-search").keypress(function(event) {
+    if (event.which == 13) {
+        event.preventDefault();
+        $("#search-form").submit();
+    }
+	});
+</script>
