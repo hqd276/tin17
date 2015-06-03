@@ -11,7 +11,7 @@
 			<?php foreach ($home_news as $key => $value) {?>
 				<div class="col-sm-6 col-xs-6 home-item">
 					<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>">
-						<img src="<?php echo base_url().'uploads/news/'.$value['image']?>">
+						<img src="<?php echo base_url().'uploads/news/thumbs/'.$value['image']?>">
 						<div class="description"><?php echo $value['title']?></div>
 					</a>
 				</div>
@@ -32,7 +32,7 @@
 				<?php foreach ($new_news_img as $key => $value) {?>
 					<div class="col-sm-6 home-item">
 						<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>">
-							<img src="<?php echo base_url().'uploads/news/'.$value['image']?>">
+							<img src="<?php echo base_url().'uploads/news/thumbs/'.$value['image']?>">
 							<div class="description"><?php echo $value['title']?></div>
 						</a>
 					</div>
@@ -95,7 +95,7 @@
 						<div class="col-sm-4">
 							<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>">
 								<div class="description"><?php echo split_char($value['title'],35)."..."?></div>
-								<img src="<?php echo base_url().'uploads/news/'.$value['image']?>">
+								<img src="<?php echo base_url().'uploads/news/thumbs/'.$value['image']?>">
 								<img class="v-icon" src="<?php echo base_url().'assets/images/video.png'?>">
 							</a>
 						</div>

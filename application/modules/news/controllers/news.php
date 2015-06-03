@@ -123,6 +123,14 @@ class News extends MX_Controller {
 			$category = array("type"=>$detail_news['type'],"id" =>0,"name"=>"","slug"=>"");
 			$other_news = $this->modelnews->getNews(array('type'=>$detail_news['type']),' LIMIT 0,5');
 		}
+		$strTags = '';
+		if ($detail_news['tag']!=''){
+			$tags = explode(',', $detail_news['tag']);
+			foreach ($tags as $key => $value) {
+				$strTags .= "<a href='".base_url('/search?txtsearch='.$value)."'>".$value."</a> , ";
+			}
+		}
+		$detail_news['tags'] = $strTags;
 		
 		$this->modelnews->updateNewsBy('slug',$slug,array('views'=>$detail_news['views']+1));
 
