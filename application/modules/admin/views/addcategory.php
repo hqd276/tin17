@@ -1,10 +1,7 @@
 <div class="contact-form col-sm-12 bg-white">
 	<h2 class="text-uppercase"><?php echo $title?></h2>
-	<div class="pull-right">
-		<a href="<?php echo base_url('/admin/category/add/'.$type)?>" class="btn btn-default "> Add news Category </a>
-		<a href="<?php echo base_url('/admin/category/index/'.$type)?>" class="btn btn-default "> List Category </a>
-	</div>
-	
+	<a href="<?php echo base_url('/admin/category/index/'.$type)?>" class="btn btn-default pull-right"> List Category </a>
+
 	<form class="form-horizontal col-md-12" role="form" method="post" enctype="multipart/form-data" action="">
 		<div class="form-group">
 			<div>
@@ -34,17 +31,6 @@
 			  	<?php echo $item['slug']; ?>
 			</div>
 		</div>
-		<!-- <div class="form-group col-sm-12">
-			<label for="inputEmail3" class="col-sm-2 control-label">Image</label>
-			<div class="col-sm-10">
-				<?php 
-				if ($item['image']!='') {
-					echo "<img class='img_item' style='height:150px;' src='".base_url("uploads/categories/".$item['image'])."'/>";
-				}
-				?>
-			  	<input type="file" class="form-control" id="inputEmail3" name="image" placeholder="Image">
-			</div>
-		</div> -->
 		<div class="form-group col-sm-12">
 			<label for="inputEmail3" class="col-sm-2 control-label">Parent</label>
 			<div class="col-sm-10">
@@ -55,15 +41,20 @@
 			</div>
 		</div>
 		<div class="form-group col-sm-12">
-			<label for="inputEmail3" class="col-sm-2 control-label">Description</label>
+			<label for="inputEmail3" class="col-sm-2 control-label">Image</label>
 			<div class="col-sm-10">
-				<textarea class="form-control" name="description" placeholder="Description"><?php echo $item['description']; ?></textarea>
+				<?php 
+				if ($item['image']!='') {
+					echo "<img class='img_item' style='height:150px;' src='".base_url("uploads/categories/".$item['image'])."'/>";
+				}
+				?>
+			  	<input type="file" class="form-control" id="inputEmail3" name="image" placeholder="Image">
 			</div>
 		</div>
 		<div class="form-group col-sm-12">
-			<label for="inputEmail3" class="col-sm-2 control-label">Order</label>
+			<label for="inputEmail3" class="col-sm-2 control-label">Description</label>
 			<div class="col-sm-10">
-			  	<input type="" class="form-control" id="inputEmail3" name="order" placeholder="Order" value="<?php echo $item['order']; ?>">
+				<textarea class="form-control" name="description" placeholder="Description"><?php echo $item['description']; ?></textarea>
 			</div>
 		</div>
 		<div class="form-group col-sm-12">
