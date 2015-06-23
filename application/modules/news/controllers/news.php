@@ -56,7 +56,7 @@ class News extends MX_Controller {
 			$data['cat'] = $category;
 			$data['title'] = $category['name'];
 			$data['description'] = $category['description'];
-			$list_news = $this->modelnews->getNews(array('category_id'=>$category['id'])," LIMIT ".$begin.",".($item_per_page+1));
+			$list_news = $this->modelnews->getNews(array('category_id'=>$category['id'])," LIMIT ".$begin.",".($item_per_page+1),' id DESC');
 		}
 		
 		$newer_link = '';

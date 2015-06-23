@@ -94,7 +94,7 @@
 					<?php foreach ($video_news as $key => $value) {?>
 						<div class="col-sm-4">
 							<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>">
-								<div class="description"><?php echo split_char($value['title'],35)."..."?></div>
+								<div class="description"><?php echo split_char($value['title'],30)."..."?></div>
 								<img src="<?php echo base_url().'uploads/news/thumbs/'.$value['image']?>">
 								<img class="v-icon" src="<?php echo base_url().'assets/images/video.png'?>">
 							</a>
