@@ -3,6 +3,7 @@
 <head>
 <title><?php echo (isset($title))?$title:$setting['title']['data']->description?></title>
 <meta name="description" content="<?php echo (isset($description))?$description:$setting['description']['data']->description?>">
+<meta name="eclick_verify" content="fFpaXh8DMRccU0xEMQoCWFRFJgwB"/>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
