@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://local.tin17.com/';
+$config['base_url']	= 'http://tin17.com/';
 // $config['base_url']	= 'http://zenithvietnamtours.com/';
 
 /*
